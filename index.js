@@ -30,9 +30,9 @@ Test your createMenuItems function by doing the following:
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
 
-console.log(createMenuItem('pizza', 5 ,'Lunch'));
-console.log(createMenuItem('burger', 7 ,'Lunch'));
-console.log(createMenuItem('pasta', 15 ,'Dinner'));
+console.log('task1b', createMenuItem('pizza', 5 ,'Lunch'));
+console.log('task1b', createMenuItem('burger', 7 ,'Lunch'));
+console.log('task1b', createMenuItem('pasta', 15 ,'Dinner'));
 
 
 
@@ -56,8 +56,14 @@ export const burger = {
   category: "Lunch", 
   discount: function(string){
     // add a function with the conditional
+    if(string === 'teacher' || string === 'student'){
+      return this.price - (this.price*0.25);
+    } else if(string === 'public'){
+      return this.price-(this.price*0.10);
+    }    
   }
 }
+console.log('task2', burger.discount('teacher'));
 
 
 
